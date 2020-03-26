@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container jumbotron">
+        <table class="table col-12 col-sm-12 col-lg-8">
+        <h1 class="text-center">ENTER BOOK DETAILS</h1>
+        <tr>
+            <td>BOOK NAME:</td>
+            <td><input type="text " class="form-control" id="bn"></td>
+        </tr>
+        <tr>
+            <td>AUTHOR:</td>
+            <td><input type="text" class="form-control" id="au"></td>
+        </tr>
+        <tr>
+            <td>DISTRIBUTOR:</td>
+            <td><input type="text" class="form-control" id="dis"></td>
+        </tr>
+        <tr>
+            <td>PUBLISHER:</td>
+            <td><input type="text" class="form-control" id="pub"></td>
+        </tr>
+        <tr>
+            <td>PRICE:</td>
+            <td><input type="text" class="form-control" id="pr"></td>
+        </tr>
+        <tr><br>
+            <td><button class="btn btn-danger" onclick="res();">RESET</button></td>
+            <td><button class="btn btn-success" onclick="sub();">SUBMIT</button></td>
+        </tr>
+        </table>
+        <div><h5 class="text-center" id="reslt"></h5></div>
+
+    </div>
+     
+    <script>
+    function res()
+    {
+        document.getElementById("bn").value="";
+        document.getElementById("au").value="";
+        document.getElementById("dis").value="";
+        document.getElementById("pub").value="";
+        document.getElementById("pr").value="";
+        document.getElementById("reslt").innerHTML="";
+    }
+    function sub()
+    {
+        const a=document.getElementById("bn").value;
+        const b=document.getElementById("au").value;
+        const c=document.getElementById("dis").value;
+        const d=document.getElementById("pub").value;
+        const e=document.getElementById("pr").value;
+        var n;
+        if(a==""||b==""||c==""||d==""||e=="")
+        {
+            n="ENETR ALL FIELDS";
+        }else
+        {
+            n="SUCCESSFULLY SUBMITTED";
+        }
+        document.getElementById("reslt").innerHTML=n;
+    }
+    </script>
+    
+</body>
+</html>

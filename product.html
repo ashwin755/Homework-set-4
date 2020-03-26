@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PRODUCT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container jumbotron">
+        <table class="table col-12 col-sm-10 col-lg-10"><br>
+            <h1 class="text-center">ENTER THE PRODUCT DETAILS BELOW</h1>
+            <tr><br>
+                <td>PRODUCT NAME:</td>
+                <td><input type="text" class="form-control" id="pn"></td>
+            </tr>
+            <tr>
+                <td>MANUFACTURER:</td>
+                <td><input type="text" class="form-control" id="man"></td>
+            </tr>
+            <tr>
+                <td>DISTRIBUTER:</td>
+                <td><input type="text" class="form-control" id="dis"></td>
+            </tr>
+            <tr>
+                <td>DISTRICT:</td>
+                <td><select name="district" id="dist" class="form-control">
+                    <option value="selct">-select-</option>
+                    <option value="trvndrm">THIRUVANATHAPURAM</option>
+                    <option value="kolm">KOLLAM</option>
+                    <option value="pathnm">PATHANAMTHITTA</option>
+                    <option value="alapi">ALLAPUZHA</option>
+                    <option value="kotym">KOTTAYAM</option>
+                    <option value="idk">IDUKKI</option>
+                    <option value="ernklm">ERANAKULAM</option>
+                    <option value="trisur">THRISSUR</option>
+                    <option value="palkd">PALAKKAD</option>
+                    <option value="malprm">MALAPURAM</option>
+                    <option value="wynd">WAYANAD</option>
+                    <option value="kozhkd">KOZHIKOD</option>
+                    <option value="kanur">KANNUR</option>
+                    <option value="kasrgd">KASARGOD</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>PRICE:</td>
+                <td><input type="text" class="form-control" id="pr"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="btn btn-success" onclick="sub();" id="sub">SUBMIT</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="color: rgb(128, 26, 0);" id="reslt"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function sub()
+            {    
+               const a=document.getElementById("pn").value; 
+               const b=document.getElementById("man").value;
+               const c=document.getElementById("dis").value;
+               const d=document.getElementById("dist").value;
+               const e=document.getElementById("pr").value;
+               var n;
+               if(a==""||b==""||c==""||d==""||e=="")
+               {
+                   n="ENTER ALL FIELDS";
+               }else
+               {
+                   n="SUBMITTED SUCCESSFULLY";
+               }
+               document.getElementById("reslt").innerHTML=n;
+
+            } 
+            
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container jumbotron"><br>
+        <div><h2 class="text-center">ENTER YOUR DETAILS BELOW</h2></div>
+        <table class="table"><br>
+            <tr>
+                <td>NAME:</td>
+                <td><input type="text" class="form-control" id="nm"></td>
+            </tr>
+            <tr>
+                <td>ADDMISSION NO:</td>
+                <td><input type="text" class="form-control" id="add"></td>
+            </tr>
+            <tr>
+                <td>DATE OF BIRTH:</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>ADDRESS:</td>
+                <td><textarea name="description" id="adrs" cols="30" rows="6" placeholder="Enter your addres here"></textarea></td>
+            </tr>
+            <tr>
+                <td>COLLEGE:</td>
+                <td><input type="text" class="form-control" id="col"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" onclick="sub();" class="btn btn-success">SUBMIT</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <p style="color: darkred;" id="reslt"></p></td>
+            </tr>
+        </table>
+      
+    </div>
+    <script>
+        function sub()
+            {
+                const a=document.getElementById("nm").value;
+                const b=document.getElementById("add").value;
+                const c=document.getElementById("adrs").value;
+                const d=document.getElementById("col").value;
+                var n;
+                if(a==""||b==""||c==""||d=="")
+                {
+                    n="PLEASE ENTER ALL FIELDS";
+                
+                }else
+                {
+                    n="SUCCESSFULLY SUBMITED";
+                }
+                document.getElementById("reslt").innerHTML=n;
+            }
+        
+    </script>
+    
+</body>
+</html>
